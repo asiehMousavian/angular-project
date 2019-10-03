@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Iranyekan";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../../assets/fonts/iranyekanwebregular_fanum.eot?#iefix") format("embedded-opentype"),
+    url("../../../assets/fonts/iranyekanwebregular_fanum.woff2") format("woff2"),
+    url("../../../assets/fonts/iranyekanwebregular_fanum.woff") format("woff"),
+    url("../../../assets/fonts/iranyekanwebregular_fanum.ttf") format("truetype");
+}
+#footer {
+    font-family: "Iranyekan";
+    direction: rtl;
+    background-color: #fff;
+    padding: 20px 0;
+    font-size: 13px;
+    h3{
+        font-weight: bold;
+        font-size: 15px;
+    }
+    ul{
+        li{
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

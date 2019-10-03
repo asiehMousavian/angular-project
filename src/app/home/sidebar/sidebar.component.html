@@ -1,0 +1,23 @@
+<div class="sidebar_main">
+    <div class="container">
+        <div class="date">
+            {{this.todayJalali}}
+        </div>
+        <div class="search">
+            <form>
+                <p>لطفا شهر مورد نظر خود را وارد نمایید :</p>
+                <mat-form-field>
+                    <input matInput placeholder="نام شهر" [ngModelOptions]="{standalone: true}" [(ngModel)]="cityName">
+                </mat-form-field>
+                <button mat-raised-button (click)="resultFunction()" color="primary">جستجو</button>
+            </form>
+        </div>
+        <!-- <div [cities]="result"> -->
+            <mat-card *ngFor="let city of cities">
+                <mat-card-title>
+                    {{city.title}}
+                </mat-card-title>
+            </mat-card>
+        <!-- </div> -->
+    </div>
+</div>

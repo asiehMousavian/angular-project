@@ -1,0 +1,37 @@
+<div class="mainarea">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 offset-xl-3 col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-md-1 col-12">
+                <div class="login_form">
+                    <mat-toolbar color="primary">
+                        فرم ورود
+                    </mat-toolbar>
+                    <mat-card>
+                    <form [formGroup]="LoginForm" (ngSubmit)="submit()">
+                        <mat-form-field>
+                            <input matInput placeholder="شماره موبایل" type="text" formControlName="mobile">
+                        </mat-form-field>
+                        <div class="help-block" *ngIf="!LoginForm.get('mobile').valid&&LoginForm.get('mobile').touched">
+                            <span class="form-alert" *ngIf ="LoginForm.get('mobile').errors['required']">
+                                وارد کردن شماره موبایل الزامی است
+                            </span>
+                            <span class="form-alert" *ngIf ="!LoginForm.get('mobile').valid">
+                                تعداد ارقام نباید کمتر از 11 باشد
+                            </span>
+                        </div>
+                        <mat-form-field>
+                            <input matInput placeholder="رمز عبور" type="password" formControlName="password">
+                        </mat-form-field>
+                        <div class="help-block" *ngIf="!LoginForm.get('password').valid&&LoginForm.get('password').touched">
+                                <span class="form-alert" *ngIf ="LoginForm.get('password').errors['required']">
+                                    وارد کردن رمز عبور الزامی است
+                                </span>
+                            </div>
+                        <button mat-raised-button color="primary" [disabled]="!LoginForm.valid" type="submit">ورود</button>
+                    </form>  
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
